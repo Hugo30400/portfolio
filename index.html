@@ -1,35 +1,87 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css" />
+    <link rel="stylesheet" href="styles/accueil.css">
+    <link rel="stylesheet" href="styles/accueilBis.css">
+    <link rel="shortcut icon" href="images/minimalLogoS.png" type="image/x-icon">
+    
     <title>Accueil</title>
-
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul class="nav-bar">
-                <li><a href="index.html">Page 1</a></li>
-                <li><a href="pages/page2.html">Page 2</a></li>
-                <li><a href="pages/page3.html">Page 3</a></li>
-                <li><a href="pages/page4.html">Page 4</a></li>
+    <a name="top"></a>
+    <nav class="navbar">
+        <a href="accueil.html" class="logo">MINIMAL</a>
+        <div class="nav-links">
+            <ul class='test1'>
+                <li class="active"><a href="#top">Home</a></li>
+                <li><a href="#code" class="btn">Code</a></li>
+                <li><a href="#presentation" class="btn">Presentation</a></li>
+                <li><a href="#etudes" class="btn">Etudes</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+        <img src="images/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
+    </nav>
+    <header></header>
 
-    <main>
-        <section id="page1" class="page">
-            <h1>Page 1</h1>
-        </section>
-    </main>
+    <div class="separation">
+        JUST SIMPLY.
+    </div>
 
-    <footer>
-        <p>by FAUS Hugo</p>
-    </footer>
+
+    <a name="code"></a>
+    <div class="left">
+        <div class="text">
+            <div class="title">CODE</div>
+            J'ai commencé le code à l'âge de 13 ans, quand j'ai voulu coder un plugin Minecraft avec le langage Java. De fil en aiguille, sans trouver de solution à ma quête, je suis tombé dans le monde de l'informatique. Ma passion pour la programmation s'est intensifiée en première, en raison de la spécialité NSI de mon lycée. C'est alors que j'ai pu apprendre les bases. Puis en parallèle des cours, durant deux mois, je me suis lancé le défi de créer Minimal.
+        </div>
+        <img src="images/code.jpg">
+    </div>
+
+    <a name="presentation"></a>
+    <div class="right">
+        <div class="text">
+            <div class="title">PRESENTATION</div>
+            Je m'appelle Hugo, j'ai 17 ans, je suis en classe de terminal. J'aime pas mal de choses, comme le code, les jeux vidéo, et les vielles voitures, je suis par ailleurs l'heureux propriétaire d'une Mazda mx-5 Na rouge de 1991, une chouette petite voiture ! J'aime la cuisine et sortir, seul ou à deux, aller à la salle de sport et à la bibliothèque pour réviser. Je suis une personne simple, je dirais même minimal comme mon site.
+        </div>
+        <img src="images/chess.jpg">
+    </div>
+    
+    <a name="etudes"></a>
+    <div class="left">
+        <div class="text">
+            <div class="title">ETUDES</div>
+            Après l'obtention de mon baccalauréat, je souhaite intégrer un BUT informatique. À la suite de ces trois années, j'aspire à poursuivre mes études pendant encore deux ans, dans un master spécialisé dans la cybersécurité. Le lieu de mes études reste encore à définir quant à la sentence de parcousup.
+        </div>
+        <img src="images/bookcase.jpg">
+    </div>
 </body>
+
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const body = document.querySelector("body");
+
+    menuHamburger.addEventListener('click',()=>{
+            navLinks.classList.toggle('mobile-menu');
+            body.classList.toggle('anti-scroll');
+        }
+    )
+
+    document.querySelector(".test1").addEventListener('click',()=>{
+            if (navLinks.classList.toggle('mobile-menu') == false){
+                body.classList.toggle('anti-scroll');
+            }
+            else{
+                body.style.overflow="auto";
+            }
+        }
+    )
+</script>
+
 </html>
