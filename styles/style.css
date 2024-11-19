@@ -1,0 +1,30 @@
+/* Variables globales */
+:root {
+    --dark-blue: #191826;
+    --background-dark: #1e1f2f;
+    --soft-blue: #50688c;
+    --light-blue: #4a6fb5;
+    --gray: #9393a7;
+    --red: #be555f;
+}
+
+/* Global */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-dark);
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Pages */
+.page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 48px;
+}
