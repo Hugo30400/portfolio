@@ -1,6 +1,6 @@
 .navbar {
     position: fixed;
-    padding: 50px;
+    padding: 0 4vw;
     display: flex;
     justify-content: space-between;
     align-items: center;     /*Centre les éléments entre eux (au même niveau)*/
@@ -43,10 +43,7 @@
 
 .navbar .menu-hamburger {     /*Pour l'icone hamburger*/ /*A REVOIR !!!*/
     display: none;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 35px;
+    z-index: 10;     /* Pour que l'icon soit au dessus de la nav qui vient de la gauche */
 }
 
 .mobile-menu {
@@ -54,19 +51,21 @@
 }
 
 @media screen and (max-width: 1080px) {
-    /*Peut être changer en fonction de la longueur des li !! */
     .navbar {
-        padding: 0;
+        padding: 0 10vw;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
     }
 
-    .navbar .logo {
-        position: absolute;
-        top: 40.4px;
-        left: 50px;
+    .navbar .logo img {
+        height: 8vh;
     }
 
     .navbar .menu-hamburger {
-        display: block;
+        display: flex;
+        color: #F5F5F5;
+        font-size: 8vh;
     }
 
     .nav-links {
