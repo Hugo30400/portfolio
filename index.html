@@ -77,10 +77,16 @@
     menuHamburger.addEventListener('click',() => {
         navLinks.classList.toggle('mobile-menu');
         body.classList.toggle('anti-scroll');
+        menuHamburger.classList.toggle('fa-bars');
+        menuHamburger.classList.toggle('fa-xmark');
     })
 
     document.querySelector(".test1").addEventListener('click',()=>{
-        if (navLinks.classList.toggle('mobile-menu') == false) body.classList.toggle('anti-scroll');
+        if (navLinks.classList.toggle('mobile-menu') == false) {
+            body.classList.toggle('anti-scroll');
+            menuHamburger.classList.add('fa-bars');
+            menuHamburger.classList.remove('fa-xmark');
+        }
         else body.style.overflow="auto";
     })
 
