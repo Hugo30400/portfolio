@@ -1,24 +1,27 @@
 
 .navbar {
-    position: absolute;
+    position: fixed;
     padding: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;     /*Centre les éléments entre eux (au même niveau)*/
-    width: 100%;
+    width: 100vw;
+    height: 15vh;
     box-sizing: border-box;
     background-color: #000000;
-    position: absolute;
 }
 
 .navbar a {
     color: #F5F5F5;
-    font-size: 1.25em;
+    font-size: 1.5em;
 }
 
-.navbar .logo {
-    font-size: 2.5em;
-    font-weight: bold;
+.navbar .logo{
+    display: flex;
+}
+
+.navbar .logo img{
+    height: 6vw;
 }
 
 .navbar .nav-links ul {

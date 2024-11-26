@@ -6,10 +6,11 @@ body::-webkit-scrollbar {display: none;}     /*Taille de la scroollbar*/
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+
 }
 
 body {
-    font-family: 'Roboto Light', serif;
+    font-family: 'Roboto Mono', monospace;
     background-color: #2c2e31;
 }
 
