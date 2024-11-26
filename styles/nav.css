@@ -7,8 +7,8 @@
     width: 100vw;
     height: 15vh;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.75);
-    transition: 0.5s ease transform;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.5s ease, 0.5s ease transform;
 }
 
 .hiddenNav {

@@ -110,7 +110,20 @@
         else navbar.classList.remove('hiddenNav');
 
         lastScrollY = currentScrollY;
-    })
+    });
+
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        const scrollPosition = window.scrollY;
+        const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollThreshold = pageHeight * 0.25;
+
+        if (scrollPosition > scrollThreshold) {
+            navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.75)';
+        } else {
+            navbar.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+        }
+    });
 </script>
 
 </html>
