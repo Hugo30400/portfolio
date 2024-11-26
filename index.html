@@ -24,21 +24,22 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <a href="index.html" class="logo"><img src="images/logo.png" ></a>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="images/logo.png" ></a>
 
-        <div class="nav-links">
-            <ul class='test1'>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="#" class="btn">Code</a></li>
-                <li><a href="#" class="btn">Presentation</a></li>
-                <li><a href="#" class="btn">Etudes</a></li>
-            </ul>
-        </div>
+            <div class="nav-links">
+                <ul class='test1'>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="#" class="btn">Code</a></li>
+                    <li><a href="#" class="btn">Presentation</a></li>
+                    <li><a href="#" class="btn">Etudes</a></li>
+                </ul>
+            </div>
 
-        <img src="images/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
-    </nav>
-    <header></header>
+            <img src="images/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
+        </nav>
+    </header>
 
     <div class="separation"></div>
 
@@ -72,21 +73,27 @@
     const navLinks = document.querySelector(".nav-links");
     const body = document.querySelector("body");
 
-    menuHamburger.addEventListener('click',()=>{
-            navLinks.classList.toggle('mobile-menu');
-            body.classList.toggle('anti-scroll');
-        }
-    )
+    menuHamburger.addEventListener('click',() => {
+        navLinks.classList.toggle('mobile-menu');
+        body.classList.toggle('anti-scroll');
+    })
 
     document.querySelector(".test1").addEventListener('click',()=>{
-            if (navLinks.classList.toggle('mobile-menu') == false){
-                body.classList.toggle('anti-scroll');
-            }
-            else{
-                body.style.overflow="auto";
-            }
-        }
-    )
+        if (navLinks.classList.toggle('mobile-menu') == false) body.classList.toggle('anti-scroll');
+        else body.style.overflow="auto";
+    })
+
+    let lastScrollY = 0;
+    const navbar = document.querySelector('nav');
+
+    window.addEventListener('scroll',()=>{
+        const currentScrollY = window.scrollY
+
+        if (currentScrollY > lastScrollY) navbar.classList.add('hiddenNav');
+        else navbar.classList.remove('hiddenNav');
+
+        lastScrollY = currentScrollY;
+    })
 </script>
 
 </html>
