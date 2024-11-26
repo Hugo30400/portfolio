@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/accueil.css">
+    <link rel="stylesheet" href="../styles/accueilBis.css">
+
+    <link rel="shortcut icon" href="../images/planete-terre.png" type="image/x-icon"> <!-- icon onglet -->
+
+    <title>Accueil</title>
+</head>
+
+<body>
+<nav class="navbar">
+    <a href="../index.html" class="logo">FAUS HUGO</a>
+
+    <div class="nav-links">
+        <ul class='test1'>
+            <li class="active"><a href="../index.html">Home</a></li>
+            <li><a href="#" class="btn">Code</a></li>
+            <li><a href="#" class="btn">Presentation</a></li>
+            <li><a href="#" class="btn">Etudes</a></li>
+        </ul>
+    </div>
+
+    <img src="../images/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
+</nav>
+
+<div class="right">
+    <div class="text">
+        <div class="title">PRESENTATION</div>
+        Je m'appelle Hugo, j'ai 17 ans, je suis en classe de terminal. J'aime pas mal de choses, comme le code, les
+        jeux vidéo, et les vielles voitures, je suis par ailleurs l'heureux propriétaire d'une Mazda mx-5 Na rouge
+        de 1991, une chouette petite voiture ! J'aime la cuisine et sortir, seul ou à deux, aller à la salle de
+        sport et à la bibliothèque pour réviser. Je suis une personne simple, je dirais même minimal comme mon site.
+    </div>
+    <img src="../images/chess.jpg">
+</div>
+
+<div class="left">
+    <div class="text">
+        <div class="title">ETUDES</div>
+        Après l'obtention de mon baccalauréat, je souhaite intégrer un BUT informatique. À la suite de ces trois
+        années, j'aspire à poursuivre mes études pendant encore deux ans, dans un master spécialisé dans la
+        cybersécurité. Le lieu de mes études reste encore à définir quant à la sentence de parcousup.
+    </div>
+
+    <img src="../images/bookcase.jpg">
+</div>
+</body>
+
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const body = document.querySelector("body");
+
+    menuHamburger.addEventListener('click',()=>{
+            navLinks.classList.toggle('mobile-menu');
+            body.classList.toggle('anti-scroll');
+        }
+    )
+
+    document.querySelector(".test1").addEventListener('click',()=>{
+            if (navLinks.classList.toggle('mobile-menu') == false){
+                body.classList.toggle('anti-scroll');
+            }
+            else{
+                body.style.overflow="auto";
+            }
+        }
+    )
+</script>
+
+</html>
