@@ -11,7 +11,7 @@ body::-webkit-scrollbar {display: none;}     /*Taille de la scroollbar*/
 
 body {
     font-family: 'Roboto Mono', monospace;
-    background-color: #2c2e31;
+    background-color: #000000;
 }
 
 .anti-scroll {     /*Quand le menu hamburger est cliqué, on peut plus scroller*/
@@ -19,6 +19,44 @@ body {
 }
 
 .separation {
+    display: none;
     background-color: #F5F5F5;
     height: 1vh;
+}
+
+.container {
+    display: flex;
+    padding: 3vw;
+    justify-content: center;
+    align-content: center;
+    gap: 3vw;
+    color: #F5F5F5;
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    gap: 3vw; /* Adds a gap of 2vw between the .rightBox elements */
+}
+
+.leftBox{
+    background-color: #111;
+    border-radius: 10px;
+}
+
+.rightBox {
+    background-color: #111;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1080px) {
+    .container {
+        padding: 10vw;
+        flex-direction: column;
+        gap: 5vw;
+    }
+
+    .rightSide {
+        gap: 5vw;
+    }
 }
