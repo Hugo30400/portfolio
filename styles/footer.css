@@ -47,27 +47,17 @@ footer{
     transition: 0.5s;
 
 }
-.footerNav ul li a:hover{
-    opacity: 1;
-}
-.designer{
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    margin: 0px 5px;
-}
 
 @media screen and (max-width: 1250px){
-    .footerNav ul{
+    .footerNav ul {
         flex-direction: column;
     }
-    .footerNav ul li{
+    .footerNav ul li {
         width:100%;
         text-align: center;
         margin: 10px;
     }
-    .socialIcons a{
+    .socialIcons a {
         padding: 8px;
         margin: 4px;
     }
