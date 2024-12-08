@@ -1,27 +1,33 @@
 body::-webkit-scrollbar {display: none;}     /*Taille de la scroollbar*/
 
+:root {
+    --background-main: #e3d8dd;
+    --background-secondary: #0D1F33;
+    --text-primary: #B3C0C9;
+    --text-secondary: #E1E6EB;
+    --button-main: #6C9FBF;
+    --button-hover: #1C4A69;
+    --border-detail: #7E5C48;
+    --alert: #D9A17A;
+    --link: #8EB9E0;
+    --link-hover: #F0F4F7;
+}
+
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-
 }
 
 body {
     font-family: 'Roboto Mono', monospace;
-    background-color: #000000;
+    background-color: var(--background-main)  ;
 }
 
 .anti-scroll {     /*Quand le menu hamburger est cliqué, on peut plus scroller*/
     overflow: hidden;
-}
-
-.separation {
-    display: none;
-    background-color: #F5F5F5;
-    height: 1vh;
 }
 
 .container {
@@ -30,7 +36,7 @@ body {
     justify-content: center;
     align-content: center;
     gap: 3vw;
-    color: #F5F5F5;
+    color: var(--text-primary);
 }
 
 .rightSide {
@@ -39,14 +45,10 @@ body {
     gap: 3vw; /* Adds a gap of 2vw between the .rightBox elements */
 }
 
-.leftBox{
-    background-color: #111;
+.leftBox, .rightBox{
+    background-color: var(--background-secondary);
     border-radius: 10px;
-}
 
-.rightBox {
-    background-color: #111;
-    border-radius: 10px;
 }
 
 @media screen and (max-width: 1080px) {
