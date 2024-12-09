@@ -25,20 +25,21 @@
 
 <body>
     <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo"><img src="images/logo.png" ></a>
+        <nav>
+            <div class="nav-content">
+                <div class="logo">HUGO</div>
 
-            <div class="nav-links">
-                <ul class='test1'>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="#" class="btn">Code</a></li>
-                    <li><a href="#" class="btn">Presentation</a></li>
-                    <li><a href="#" class="btn">Etudes</a></li>
+                <ul class="nav-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-            </div>
 
-            <i class="fa-solid fa-bars menu-hamburger"></i>
-            <!--<img src="images/menu-btn.png" alt="menu hamburger" class=""> -->
+                <button class="burger">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -77,6 +78,7 @@
 </body>
 
 <script>
+    /*
     const menuHamburger = document.querySelector(".menu-hamburger");
     const navLinks = document.querySelector(".nav-links");
     const body = document.querySelector("body");
@@ -120,6 +122,28 @@
         } else {
             navbar.style.backgroundColor = 'rgba(0, 0, 0, 0)';
         }
+    });
+    */
+
+    const nav = document.querySelector('nav');
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+    const burgerIcon = burger.querySelector('i');
+
+    // Change navbar background on scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+
+    // Toggle menu on burger click
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        burgerIcon.classList.toggle('fa-bars');
+        burgerIcon.classList.toggle('fa-xmark');
     });
 </script>
 
