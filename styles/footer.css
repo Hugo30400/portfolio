@@ -1,33 +1,38 @@
 footer{
     background-color: var(--background-secondary);
 }
+
 .footerContainer{
     width: 100%;
     padding: 70px 30px 20px ;
 }
+
 .socialIcons{
     display: flex;
     justify-content: center;
 }
+
 .socialIcons a{
     text-decoration: none;
     padding:  10px;
-    background-color: var(--button-main);
+    background-color: var(--text-primary);
     margin: 10px;
     border-radius: 25%;
 }
+
 .socialIcons a i{
     font-size: 2em;
-    color: black;
+    color: var(--button-hover);
     opacity: 0.9;
 }
-/* Hover affect on social media icon */
+
+/* Hover sur les icon réseaux sociaux */
 .socialIcons a:hover{
     background-color: var(--button-hover);
     transition: 0.5s;
 }
 .socialIcons a:hover i{
-    color: var(--text-secondary);
+    color: var(--text-primary);
     transition: 0.5s;
 }
 .footerNav{
@@ -39,7 +44,7 @@ footer{
     list-style-type: none;
 }
 .footerNav ul li a{
-    color:white;
+    color: var(--text-primary);
     margin: 20px;
     text-decoration: none;
     font-size: 1.3em;
