@@ -4,11 +4,11 @@ nav {
     padding: 20px 50px;
     transition: all 0.3s ease;
     background-color: transparent;
+    opacity: 0.9;
 }
 
 nav.scrolled {
     background-color: var(--background-secondary);
-    opacity: 0.90;
 }
 
 .nav-content {
@@ -20,10 +20,9 @@ nav.scrolled {
 }
 
 .logo {
-    color: var(--text-primary);
     font-size: 24px;
     font-weight: bold;
-    user-select: none;
+    color: var(--text-primary);
 }
 
 .nav-links {
@@ -53,20 +52,21 @@ nav.scrolled {
 
     .nav-links {
         position: fixed;
-        top: 60px;
+        top: 72.5px;
         left: 0;
         right: 0;
         background-color: var(--background-secondary);
-        opacity: 0.90;
+        visibility: hidden;
         flex-direction: column;
         align-items: center;
         padding: 20px;
         gap: 20px;
         transform: translateY(-150%);
-        transition: transform 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     .nav-links.active {
         transform: translateY(0);
+        visibility: visible;
     }
 }
