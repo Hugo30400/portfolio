@@ -1,14 +1,11 @@
 :root {
-    --background-main: #e3d8dd;
-    --background-secondary: #0D1F33;
-    --text-primary: #B3C0C9;
-    --text-secondary: #E1E6EB;
-    --button-main: #6C9FBF;
-    --button-hover: #1C4A69;
-    --border-detail: #7E5C48;
-    --alert: #D9A17A;
-    --link: #8EB9E0;
-    --link-hover: #F0F4F7;
+    --primary-light: #E8D3D1;
+    --primary-dark: #B4A7A9;
+    --secondary-light: #D2DDE1;
+    --secondary-dark: #9BA7AC;
+    --accent: #F2C4BC;
+    --body-background: #F5F4F6;
+    --neutral-dark: #4A4548;
 }
 
 * {
@@ -21,7 +18,7 @@
 
 body {
     font-family: 'Roboto Mono', monospace;
-    background-color: var(--background-main)  ;
+    background-color: var(--body-background);  ;
 }
 
 .anti-scroll {     /*Quand le menu hamburger est cliqué, on peut plus scroller*/
@@ -45,8 +42,8 @@ body {
 .cell {
     padding: 20px;
     border-radius: 10px;
-    background-color: var(--background-secondary);
-    color: var(--text-primary);
+    background-color: #FFFFFF;
+    color: var(--secondary-dark);
     min-height: 200px;
 }
 

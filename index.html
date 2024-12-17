@@ -11,37 +11,51 @@
     <link rel="stylesheet" href="styles/body.css">
     <link rel="stylesheet" href="styles/footer.css">
 
-    <!-- icon onglet -->
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon"> <!-- icon onglet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- lien des icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap"> <!-- lien de la police -->
 
-    <!-- lien des icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="scripts/menu.js" defer></script>
 
-    <!-- lien de la police -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap">
-    
     <title>Accueil</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="nav-content">
-                <div class="logo">HUGO</div>
-
-                <ul class="nav-links">
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#apropos">À propos</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-
-                <button class="burger">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+        <nav class="navbar">
+            <div class="logo">
+                LOGO
+                <!-- <img src="/api/placeholder/150/80" alt="Logo" /> -->
+            </div>
+            <div id="nav-icon4">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
+
+        <div class="nav-menu">
+            <a href="#accueil">Accueil</a>
+            <a href="pages/test.html">Services</a>
+            <a href="#apropos">À propos</a>
+            <a href="#contact">Contact</a>
+        </div>
     </header>
+
+    <div class="container">
+        <div class="cell left-cell">
+            <h1>Cellule gauche</h1>
+            <p>Vide, quantum, inquam, fallare, Torquate. oratio me istius philosophi non offendit; nam et complectitur verbis, quod vult, et dicit plane, quod intellegam; et tamen ego a philosopho, si afferat eloquentiam, non asperner, si non habeat, non admodum flagitem. re mihi non aeque satisfacit, et quidem locis pluribus. sed quot homines, tot sententiae; falli igitur possumus.</p>
+        </div>
+        <div class="cell right-top-cell">
+            <h1>Cellule droite supérieure</h1>
+            <p>Vide, quantum, inquam, fallare, Torquate. oratio me istius philosophi non offendit; nam et complectitur verbis, quod vult, et dicit plane, quod intellegam; et tamen ego a philosopho, si afferat eloquentiam, non asperner, si non habeat, non admodum flagitem. re mihi non aeque satisfacit, et quidem locis pluribus. sed quot homines, tot sententiae; falli igitur possumus.</p>
+        </div>
+        <div class="cell right-bottom-cell">
+            <h1>Cellule droite inférieure</h1>
+            <p>Vide, quantum, inquam, fallare, Torquate. oratio me istius philosophi non offendit; nam et complectitur verbis, quod vult, et dicit plane, quod intellegam; et tamen ego a philosopho, si afferat eloquentiam, non asperner, si non habeat, non admodum flagitem. re mihi non aeque satisfacit, et quidem locis pluribus. sed quot homines, tot sententiae; falli igitur possumus.</p>
+        </div>
+    </div>
 
     <div class="container">
         <div class="cell left-cell">
@@ -76,28 +90,4 @@
         </div>
     </footer>
 </body>
-
-<script>
-    const nav = document.querySelector('nav');
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-    const burgerIcon = burger.querySelector('i');
-
-    // Change navbar background on scroll
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
-        }
-    });
-
-    // Toggle menu on burger click
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        burgerIcon.classList.toggle('fa-bars');
-        burgerIcon.classList.toggle('fa-xmark');
-    });
-</script>
-
 </html>
