@@ -8,33 +8,12 @@
     --neutral-dark: #4A4548;
 }
 
-/* Pour les navigateurs Webkit (Chrome, Safari, Opera) */
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--body-background);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--accent);
-    border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-dark);
-}
-
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    /* Pour Firefox */
-    scrollbar-width: thin;
-    scrollbar-color: var(--accent) var(--body-background);
 }
 
 body {
