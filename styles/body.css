@@ -21,7 +21,8 @@ body {
     background-color: var(--body-background);  ;
 }
 
-.anti-scroll {     /*Quand le menu hamburger est cliqué, on peut plus scroller*/
+/* Pour bloquer le scroll quand le menu burger est ouvert */
+.no-scroll {
     overflow: hidden;
 }
 

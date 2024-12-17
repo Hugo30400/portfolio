@@ -1,10 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const burger = document.getElementById('nav-icon4');
     const menu = document.querySelector('.nav-menu');
+    const body = document.body;  // Sélection du body
 
     burger.addEventListener('click', function() {
         this.classList.toggle('open');
         menu.classList.toggle('open');
+        body.classList.toggle('no-scroll');  // Toggle la classe no-scroll
     });
 });
 
@@ -14,23 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastScrollY = window.scrollY;
 
     window.addEventListener('scroll', () => {
-        // Obtenir la position et la hauteur du header
         const headerHeight = header.offsetHeight;
         const currentScroll = window.scrollY;
 
-        // Si on a dépassé le header
-        if (currentScroll > headerHeight) {
-            // Gestion de l'affichage/masquage basé sur la direction du scroll
+        if (currentScroll <= headerHeight) {
+            navbar.classList.remove('nav-scrolled');
+            navbar.classList.remove('hide-nav');
+        }
+        else if (currentScroll > headerHeight + 50) {
+            navbar.classList.add('nav-scrolled');
             if (currentScroll > lastScrollY) {
                 navbar.classList.add('hide-nav');
             } else {
                 navbar.classList.remove('hide-nav');
             }
-            navbar.classList.add('nav-scrolled');
-        } else {
-            // Si on est dans le header
-            navbar.classList.remove('nav-scrolled');
-            navbar.classList.remove('hide-nav');
         }
 
         lastScrollY = currentScroll;
