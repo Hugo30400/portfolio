@@ -1,7 +1,7 @@
 .navbar {
     height: 10vh;
     width: 100vw;
-    padding: 0 5%;
+    padding: 0 1%;
     background-color: transparent;
     display: flex;
     justify-content: space-between;
@@ -22,16 +22,21 @@
     transform: translateY(-100%);
 }
 
+
+/* Pour le logo svg */
 .logo {
-    height: 8vh;
     display: flex;
     align-items: center;
 }
 
-.logo img {
-    height: 100%;
-    object-fit: contain;
+.remplissage-lettre {
+    fill: var(--neutral-dark);
 }
+
+.remplissage-bordure {
+    stroke: var(--neutral-dark);
+}
+
 
 /* Votre code du menu burger */
 #nav-icon4 {
