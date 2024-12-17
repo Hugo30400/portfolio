@@ -45,6 +45,12 @@ body {
     background-color: #FFFFFF;
     color: var(--secondary-dark);
     min-height: 200px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.cell h1 {
+    color: var(--primary-dark);
+    margin-bottom: 20px;
 }
 
 .left-cell {
