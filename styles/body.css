@@ -58,6 +58,10 @@ main {
     margin-bottom: 20px;
 }
 
+.cell p {
+    margin-bottom: 10px;
+}
+
 .left-cell {
     grid-area: left;
 }
@@ -74,8 +78,8 @@ main {
     .container {
         grid-template-columns: 1fr;
         grid-template-areas:
-                    "right-top"
                     "left"
+                    "right-top"
                     "right-bottom";
     }
 }
