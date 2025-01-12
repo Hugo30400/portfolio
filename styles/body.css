@@ -26,12 +26,15 @@ body {
     overflow: hidden;
 }
 
+main {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
 
 /* parti avec les trois cellules */
 .container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 2fr;
