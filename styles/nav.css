@@ -37,6 +37,10 @@
     stroke: var(--neutral-dark);
 }
 
+.logo a {
+    text-decoration: none;
+    display: block; /* Pour que le lien prenne toute la zone du logo */
+}
 
 /* Votre code du menu burger */
 #nav-icon4 {
