@@ -31,13 +31,8 @@ footer {
 }
 
 /* Hover sur les icon réseaux sociaux */
-.socialIcons a:hover {
-    background-color: yellow;
-    transition: 0.5s;
-}
-
 .socialIcons a:hover i {
-    color: violet;
+    color: var(--neutral-dark);
     transition: 0.5s;
 }
 
